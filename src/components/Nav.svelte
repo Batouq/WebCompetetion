@@ -21,10 +21,12 @@
 <style>
   .logo {
     width: 200px;
+    cursor: pointer;
   }
 
   .list--item {
     display: flex;
+    cursor: pointer;
     padding: 20px;
     justify-content: center;
     width: 100px;
@@ -33,6 +35,7 @@
   .logout {
     align-self: center;
     width: 50px;
+    cursor: pointer;
   }
   li {
     list-style: none;
