@@ -1,5 +1,4 @@
 <script>
-  let logo = "Icons/logo.png";
   import Nav from "./components/Nav.svelte";
   import Profile from "./components/Profile.svelte";
   import TodoPreview from "./components/Todo-preview.svelte";
@@ -13,18 +12,11 @@
       <Profile />
       <Watch />
       <TodoPreview />
-      <img class="logo " src={logo} alt=" logo" />
     </div>
   </div>
 </main>
 
 <style>
-  .logo {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    cursor: pointer;
-  }
   .container {
     height: 100%;
     display: flex;

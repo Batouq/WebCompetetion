@@ -21,7 +21,7 @@
 
 <div class="container">
   <input
-    style="width:30rem; height: 2rem; border: none; margin-bottom: 1.5rem;"
+    style="width:30rem; height: 2rem;  margin-bottom: 1.5rem; border: 1px soild #6ac977 ;"
     bind:value={newItem}
     type="text"
     placeholder="new todo item.."
@@ -39,11 +39,12 @@ padding: 20px 20px; border-radius: 50%;"
       <span class:checked={item.status}>{item.text}</span>
       <span on:click={() => removeFromList(index)}>
         <img
+          class="trash"
           src={trash}
           alt=""
           width="40px"
           height="20pxpx"
-          style="float: right;"
+          style="float: right; cursor: pointer;"
         />
       </span>
       <br />
@@ -52,8 +53,14 @@ padding: 20px 20px; border-radius: 50%;"
 </div>
 
 <style>
+  .trash{
+    margin: auto auto;
+  }
+  .trash:hover {
+    filter: brightness(0) saturate(100%) invert(16%) sepia(89%) saturate(7487%)
+      hue-rotate(359deg) brightness(108%) contrast(111%);
+  }
   .item {
-    
     font-size: 25px;
     border: 1px solid black;
   }
@@ -62,6 +69,6 @@ padding: 20px 20px; border-radius: 50%;"
   }
   .checked {
     text-decoration: line-through;
-    background-color: #6ac977;
+    color: #6ac977;
   }
 </style>
