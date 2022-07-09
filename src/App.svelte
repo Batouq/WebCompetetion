@@ -9,9 +9,9 @@
   <div class="container">
     <Nav />
     <div class="thepages-containers">
+      <TodoPreview />
       <Profile />
       <Watch />
-      <TodoPreview />
     </div>
   </div>
 </main>
@@ -26,7 +26,7 @@
     background-color: white;
     display: flex;
     flex-direction: row-reverse;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     border-radius: 100px;
     margin-top: 20px;
     margin-right: 20px;

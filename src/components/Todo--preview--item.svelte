@@ -26,11 +26,7 @@
     type="text"
     placeholder="new todo item.."
   />
-  <button
-    style="border:none ; background-color: #6AC977; width: fit-content;
-padding: 20px 20px; border-radius: 50%;"
-    on:click={addToList}>Add</button
-  >
+  <button class="addbtn" on:click={addToList(newItem)}>Add</button>
 
   <br />
   {#each todoList as item, index}
@@ -53,7 +49,19 @@ padding: 20px 20px; border-radius: 50%;"
 </div>
 
 <style>
-  .trash{
+  .addbtn {
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background-color: #23d43b;
+    width: fit-content;
+    padding: 20px 20px;
+    border-radius: 50%;
+  }
+  .addbtn:hover {
+    transform: scale(1.1);
+  }
+  .trash {
     margin: auto auto;
   }
   .trash:hover {
