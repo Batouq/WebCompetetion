@@ -3,18 +3,33 @@
   import Profile from "./components/Profile.svelte";
   import TodoPreview from "./components/Todo-preview.svelte";
   import Watch from "./components/watch.svelte";
+  import MediaQuery from "./MediaQuery.svelte";
 </script>
 
-<main>
-  <div class="container">
-    <Nav />
-    <div class="thepages-containers">
-      <TodoPreview />
-      <Profile />
-      <Watch />
+<MediaQuery query="(min-width: 800px)" let:matches>
+  {#if matches}
+    <main>
+      <div class="container">
+        <Nav />
+        <div class="thepages-containers">
+          <TodoPreview />
+          <Profile />
+          <Watch />
+        </div>
+      </div>
+    </main>
+  {/if}
+  <main>
+    <div class="container">
+      <Nav />
+      <div class="thepages-containers">
+        <TodoPreview />
+        <Profile />
+        <Watch />
+      </div>
     </div>
-  </div>
-</main>
+  </main>
+</MediaQuery>
 
 <style>
   .container {
@@ -25,8 +40,7 @@
   .thepages-containers {
     background-color: white;
     display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     border-radius: 100px;
     margin-top: 20px;
     margin-right: 20px;

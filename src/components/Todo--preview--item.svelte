@@ -9,8 +9,10 @@
   ];
 
   function addToList() {
-    todoList = [...todoList, { text: newItem, status: false }];
-    newItem = "";
+   
+      todoList = [...todoList, { text: newItem, status: false }];
+      newItem = "";
+    
   }
 
   function removeFromList(index) {
